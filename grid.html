@@ -13,17 +13,18 @@
             width: 1300px;
             height: 700px;
             display: grid;
-            place-items: center;
-            row-gap: 3px;
+            justify-content: space-around;
+            grid-template-rows: repeat(3, 200px);
+            grid-template-columns: repeat(3, 200px);
+            row-gap: 10px;
+            column-gap: 10px;
+        
         }
         .child {
-            background-color: linear-gradient( salmon , grey );
-            width: 40px;
-            height: 40px;
-            background-size: 30px;
+            background-image: linear-gradient(to right, rgb(244, 244, 15) 30%, rgb(95, 226, 160) );
+            width: 200px;
+            height: 200px;
             border: 2px solid black;
-
-            
         }
         .image {
             margin: 50px;
@@ -39,7 +40,7 @@
             /* filter: saturate(30%); */
             /* filter: grayscale(50%); */
             /* filter: contrast(-2); */
-            /* filter: drop-shadow(30px 40px 4px salmon); */
+            filter: drop-shadow(30px 40px 4px salmon);
             /* filter: opacity(70%); */
             /* filter:sepia() */
         }
@@ -56,6 +57,7 @@
         <div class="child">Six</div>
         <div class="child">Seven</div>
         <div class="child">Eight</div>
+        <div class="child">Nine</div>
     </div>
     <div class="image">
         <img src="me.jpg" alt="my pic">
