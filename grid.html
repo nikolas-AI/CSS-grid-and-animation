@@ -7,8 +7,7 @@
     <title>CSS Grid</title>
 
     <style>
-        .parent {
-            position: absolute;
+        .parent {position: absolute;
             background-color: steelblue;
             width: 1300px;
             height: 700px;
@@ -17,25 +16,44 @@
             transform: translate(-50%, -50%);
             display: grid;
             place-items: center;
-        
+            row-gap: 3px;
         }
         .child {
             background: linear-gradient(to right, 0.33turn, salmon 20%, grey 20%);
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
+            background-size: 30px;
+            border: 2px solid black;
+
+        }
+        .image img {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            filter: blur(2px);
+            filter: brightness(1);
+            filter: saturate(3%);
+            filter: grayscale(25%);
         }
     </style>
 </head>
 <body>
     <div class="parent">
-        <div class="child"></div>
-        <div class="child"></div>
-        <div class="child"></div>
-        <div class="child"></div>
-        <div class="child"></div>
-        <div class="child"></div>
-        <div class="child"></div>
-        <div class="child"></div>
+        <div class="child">One</div>
+        <div class="child">Two</div>
+        <div class="child">Three</div>
+        <div class="child">Four</div>
+        <div class="child">Five</div>
+        <div class="child">Six</div>
+        <div class="child">Seven</div>
+        <div class="child">Eight</div>
+    </div>
+    <div class="image">
+        <img src="me.jpg" alt="my pic">
     </div>
 </body>
 </html>
