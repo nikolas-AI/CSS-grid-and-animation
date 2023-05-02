@@ -107,6 +107,26 @@
         .childb {
             border: 3px solid rgb(174, 238, 11);
         }
+
+        .parent3{
+            background:linear-gradient(rgb(181, 190, 187), rgb(255, 0, 195));
+            border: 5px solid rgb(25, 29, 22);
+            display: grid;
+            grid-template-rows: repeat(4, 100px);
+            grid-template-columns:repeat(4, 1fr);
+            
+            grid-gap: 20px 30px;
+        }
+             
+        .childc {
+            width: 100px;
+            height: 80px;
+            border: 3px solid rgb(30, 32, 31);
+        }
+        .child13 {
+            grid-area: 1/1/4/4;
+            background-color: red;
+        }
         </style>
 </head>
 <body>
@@ -130,6 +150,12 @@
         <div class="childb child22"></div>
         <div class="childb child32"></div>
         <div class="childb child42"></div>
+    </div>
+    <div class="parent3">
+        <div class="childc child13"></div>
+        <div class="childc child23"></div>
+        <div class="childc child33"></div>
+        <div class="childc child43"></div>
     </div>
     
     
