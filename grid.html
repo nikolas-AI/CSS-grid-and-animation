@@ -10,20 +10,19 @@
         .parent1 {
             margin-left: 50px;
             background-color: steelblue;
-            width: 1300px;
-            height: 700px;
             display: grid;
-
-            grid-template-rows: 100px 100px 100px 100px 100px 100px;
-            grid-template-columns: 100px 100px 100px 100px 100px 100px;
-            /* grid-template-rows: repeat(6, 100px);
-            grid-template-columns: repeat(6, 100px); */
-
+            
+            /* grid-template-rows: 100px 100px 100px 100px 100px 100px;
+            grid-template-columns: 100px 100px 100px 100px 100px 100px; */
+            grid-template-rows: repeat(6, 100px);
+            grid-template-columns: repeat(6, 100px);
+            
             grid-auto-columns: 100px;
             grid-auto-flow: column;
-
-            row-gap: 20px;
-            column-gap: 20px;
+            
+            /* row-gap: 20px;
+            column-gap: 20px; */
+            grid-gap: 20px 20px;
         }
         .child {
             background-image: linear-gradient(to right, rgb(244, 244, 15) 30%, rgb(95, 226, 160) );
@@ -82,14 +81,17 @@
         
         .parent2{
             background:linear-gradient(rgb(28, 120, 89), rgb(0, 157, 255));
+            border: 5px solid rgb(25, 29, 22);
             display: grid;
-            grid-template-rows: 100px 100px 100px;
-            grid-template-columns: 1fr 1fr 1fr;
-            row-gap: 20px;
-            column-gap: 20px;
+            grid-template-rows: 100px 200px ;
+            grid-template-columns: 1fr  3fr;
+            grid-gap: 20px 30px;
+            grid-template-areas: 
+            'header header'
+            'main aside';
         }
         .childb {
-            border: 3px solid rebeccapurple;
+            border: 3px solid rgb(174, 238, 11);
         
         }
         
@@ -112,9 +114,10 @@
         <img src="me.jpg" alt="my pic">
     </div>
     <div class="parent2">
-        <div class="childb child12">One</div>
-        <div class="childb child22">Two</div>
-        <div class="childb child32">Three</div>
+        <div class="childb child12"></div>
+        <div class="childb child22"></div>
+        <div class="childb child32"></div>
+        <div class="childb child42"></div>
     </div>
     
     
