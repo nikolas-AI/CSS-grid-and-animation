@@ -7,38 +7,43 @@
     <title>CSS Grid</title>
 
     <style>
-        .parent {position: absolute;
+        .parent {
+            margin-left: 50px;
             background-color: steelblue;
             width: 1300px;
             height: 700px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             display: grid;
             place-items: center;
             row-gap: 3px;
         }
         .child {
-            background: linear-gradient(to right, 0.33turn, salmon 20%, grey 20%);
+            background-color: linear-gradient( salmon , grey );
             width: 40px;
             height: 40px;
             background-size: 30px;
             border: 2px solid black;
 
+            
+        }
+        .image {
+            margin: 50px;
+            display: flex;
+            justify-content: center;
         }
         .image img {
-            position: absolute;
             width: 500px;
             height: 500px;
             object-fit: cover;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            filter: blur(2px);
-            filter: brightness(1);
-            filter: saturate(3%);
-            filter: grayscale(25%);
+            /* filter: blur(2px); */
+            /* filter: brightness(1); */
+            /* filter: saturate(30%); */
+            /* filter: grayscale(50%); */
+            /* filter: contrast(-2); */
+            /* filter: drop-shadow(30px 40px 4px salmon); */
+            /* filter: opacity(70%); */
+            /* filter:sepia() */
         }
+        
     </style>
 </head>
 <body>
@@ -55,5 +60,7 @@
     <div class="image">
         <img src="me.jpg" alt="my pic">
     </div>
+    
+    
 </body>
 </html>
