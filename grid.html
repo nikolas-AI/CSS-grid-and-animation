@@ -7,7 +7,7 @@
     <title>CSS Grid</title>
 
     <style>
-        .parent {
+        .parent1 {
             margin-left: 50px;
             background-color: steelblue;
             width: 1300px;
@@ -18,6 +18,9 @@
             grid-template-columns: 100px 100px 100px 100px 100px 100px;
             /* grid-template-rows: repeat(6, 100px);
             grid-template-columns: repeat(6, 100px); */
+
+            grid-auto-columns: 100px;
+            grid-auto-flow: column;
 
             row-gap: 20px;
             column-gap: 20px;
@@ -46,7 +49,7 @@
         }
         .child4 {
             grid-area: 3/1/7/4;
-        
+            
         }
         .child5 {
             grid-area: 3/4/4/6;
@@ -77,10 +80,23 @@
             /* filter:sepia() */
         }
         
-    </style>
+        .parent2{
+            background:linear-gradient(rgb(28, 120, 89), rgb(0, 157, 255));
+            display: grid;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-columns: 1fr 1fr 1fr;
+            row-gap: 20px;
+            column-gap: 20px;
+        }
+        .childb {
+            border: 3px solid rebeccapurple;
+        
+        }
+        
+        </style>
 </head>
 <body>
-    <div class="parent">
+    <div class="parent1">
         <div class="child child1">One</div>
         <div class="child child2">Two</div>
         <div class="child child3">Three</div>
@@ -90,9 +106,15 @@
         <div class="child child7">Seven</div>
         <div class="child child8">Eight</div>
         <div class="child child9">Nine</div>
+        <div class="child child10">Ten</div>
     </div>
     <div class="image">
         <img src="me.jpg" alt="my pic">
+    </div>
+    <div class="parent2">
+        <div class="childb child12">One</div>
+        <div class="childb child22">Two</div>
+        <div class="childb child32">Three</div>
     </div>
     
     
