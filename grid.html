@@ -8,7 +8,7 @@
 
     <style>
         .parent1 {
-            margin-left: 50px;
+            margin: 50px;
             background-color: steelblue;
             display: grid;
             
@@ -23,6 +23,8 @@
             /* row-gap: 20px;
             column-gap: 20px; */
             grid-gap: 20px 20px;
+
+            justify-content: center;
         }
         .child {
             background-image: linear-gradient(to right, rgb(244, 244, 15) 30%, rgb(95, 226, 160) );
@@ -80,6 +82,8 @@
         }
         
         .parent2{
+            margin: 50px;
+
             background:linear-gradient(rgb(28, 120, 89), rgb(0, 157, 255));
             border: 5px solid rgb(25, 29, 22);
             display: grid;
@@ -109,6 +113,7 @@
         }
 
         .parent3{
+            margin: 50px;
             background:linear-gradient(rgb(181, 190, 187), rgb(255, 0, 195));
             border: 5px solid rgb(25, 29, 22);
             display: grid;
@@ -116,15 +121,26 @@
             grid-template-columns:repeat(4, 1fr);
             
             grid-gap: 20px 30px;
+
+            justify-content: start;
+
+            justify-items: center;
+            align-items: center;
         }
              
         .childc {
-            
+            grid-row: 2/4;
+            height: 100px;
+            width: 100px;
             border: 3px solid rgb(30, 32, 31);
         }
         .child13 {
-            grid-area: 1/1/4/4;
+            justify-self: end;
         }
+        .child43 {
+            justify-self: start;;
+        }
+        
         </style>
 </head>
 <body>
