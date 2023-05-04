@@ -256,13 +256,13 @@
         animation-delay: 2s;
     }
     .animate--fast {
-        animation-duration: 0.8s;
+        animation-duration: 1s;
     }
     .animate--slow {
         animation-duration: 3s;
     }
     .animate--medium {
-        animation-duration: 1s;
+        animation-duration: 2s;
     }
     .slide_down {
         animation-name: slide;
@@ -283,7 +283,7 @@
         margin: 10px;
         text-align: center;
         background: linear-gradient(to bottom, red, blue);
-        border: 2px solid white;
+        border-radius: 50px;
     } 
     @keyframes slide {
         0%, 100%{
@@ -332,6 +332,9 @@
     </div>
     <div class="utility_class">
         <div class="utility slide_down animate animate--slow animate--infinite">1</div>
+        <div class="utility animate slide_down animate--fast animate--infinite">2</div>
+        <div class="utility animate slide_down animate--medium  animate--infinite">3</div>
+        <div class="utility animate slide_down animate--fast animate--delay animate--infinite">4</div>
         <div class="utility animate slide_down animate--fast animate--infinite">2</div>
         <div class="utility animate slide_down animate--medium  animate--infinite">3</div>
         <div class="utility animate slide_down animate--fast animate--delay animate--infinite">4</div>
