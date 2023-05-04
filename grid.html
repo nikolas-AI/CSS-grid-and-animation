@@ -149,7 +149,6 @@
         
 
         .parent_animation {
-            position: relative;
             background: linear-gradient(to right, steelblue, grey);
             height: 500px;
             width: 1000px;
@@ -157,8 +156,7 @@
             border-radius: 10px;
             display: flex;
             justify-content: space-around;
-            bottom: 30px;
-            transform: translateX(20%);
+            margin-bottom: 30px;
         }
         .animation {
             height: 100px;
@@ -258,13 +256,19 @@
         animation-delay: 2s;
     }
     .animate--fast {
-        animation-duration: 0.5s;
+        animation-duration: 0.8s;
     }
     .animate--slow {
         animation-duration: 3s;
     }
+    .animate--medium {
+        animation-duration: 1s;
+    }
+    .slide_down {
+        animation-name: slide;
+        animation-timing-function: linear;
+    }
     .utility_class {
-        position: relative;
         background: linear-gradient(to right, rgb(195, 249, 0)50%, rgba(0, 243, 97, 0.703));
         height: 500px;
         width: 1000px;
@@ -272,7 +276,6 @@
         border-radius: 10px;
         display: flex;
         justify-content: space-around;
-        transform: translateX(20%);
     }
     .utility {
         height: 100px;
@@ -282,14 +285,11 @@
         background: linear-gradient(to bottom, red, blue);
         border: 2px solid white;
     } 
-    .slide_down {
-        animation: slide;
-    }
     @keyframes slide {
-        from{
+        0%, 100%{
             transform: translateY(0);
         }
-        to{
+        50%{
             transform: translateY(350px);
         }
     }
@@ -331,10 +331,10 @@
         <div class="animation d">D</div>
     </div>
     <div class="utility_class">
-        <div class="utility 1">1</div>
-        <div class="utility 2">2</div>
-        <div class="utility 3">3</div>
-        <div class="utility 4">4</div>
+        <div class="utility slide_down animate animate--slow animate--infinite">1</div>
+        <div class="utility animate slide_down animate--fast animate--infinite">2</div>
+        <div class="utility animate slide_down animate--medium animate animate--infinite">3</div>
+        <div class="utility animate slide_down">4</div>
     </div>
     
 </body>
