@@ -329,9 +329,9 @@ margin-top: 500px;
 }
 @keyframes slide {
 0%, 100%{
-    transform: translateY(0);
+    transform: translateY(0) scale(1.5);
 }
 50%{
-    transform: translateY(350px);
+    transform: translateY(350px) ;
 }
 }
