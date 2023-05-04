@@ -161,6 +161,7 @@
             height: 100px;
             width: 100px;
             margin: 10px;
+            text-align: center;
             background: linear-gradient(to bottom, red, blue);
             border: 2px solid white;
         } 
@@ -169,10 +170,16 @@
         transition-duration: 1s;
         transition-timing-function: linear;
         transition-delay: 0s; */
-        transition: transform 1s linear 0s;
+
+        /* transition: transform 1s linear 0s, background 1s, font-size 1s; */
+
+        transition: all 2s;
     }
     .a:hover {
-        transform: scale(-1);
+        transform: scale(-1) rotate(180deg);
+        background: linear-gradient(to bottom, rgb(238, 255, 0), rgb(0, 255, 21));
+        font-size: 30px;
+
     }
     .b {
         animation-name: rotate;
@@ -224,10 +231,10 @@
     </div>
     
     <div class="parent_animation">
-        <div class="animation a "></div>
-        <div class="animation b"></div>
-        <div class="animation c"></div>
-        <div class="animation d"></div>
+        <div class="animation a ">A</div>
+        <div class="animation b">B</div>
+        <div class="animation c">C</div>
+        <div class="animation d">D</div>
     </div>
     
 </body>
