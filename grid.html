@@ -217,21 +217,28 @@
     }
 
     .d {
-        animation: bounce 3s linear 0s 1 normal forwards;
+        border-radius: 50%;
+        animation: bounce 3s ease-in 0s 1 normal forwards;
     }
 
     @keyframes bounce {
         0% {
             transform: translateY(0);
         }
-        50%, 80%, 100% {
+         20%, 40%, 60%, 80%, 100% {
             transform: translateY(350px);
         }
+        30% {
+            transform: translateY(120px);
+        }
+        50% {
+            transform: translateY(180px);
+        }
         70% {
-            transform: translateY(200px);
+            transform: translateY(250px);
         }
         90% {
-            transform: translateY(300px);
+            transform: translateY(330px);
         }
         
     }
