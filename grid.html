@@ -191,7 +191,7 @@
         animetion-direction: reverse
         animation-fill-mode: both; */
         
-        animation: rotate 3s linear 0s 5 reverse both;
+        animation: rotate 3s linear 2s 5 reverse both;
     }
     
     @keyframes rotate {
@@ -200,6 +200,7 @@
         }
         to{
             transform: rotate(360deg);
+            transform-origin: 200px;
         }
     }
     
@@ -281,17 +282,23 @@
         border: 5px solid black;
         border-radius: 10px;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         margin: 50px;
+        
     }
     .utility {
+        box-shadow: 10px  10px 10px 10px rgb(1, 254, 56) ;
         height: 100px;
         width: 100px;
-        margin: 10px;
+        margin: 60px;
         text-align: center;
         background: linear-gradient(to bottom, red, blue);
         border-radius: 50px;
     } 
+    span {
+        position: absolute;
+
+    }
     @keyframes slide {
         0%, 100%{
             transform: translateY(0);
@@ -338,6 +345,7 @@
         <div class="animation d">D</div>
     </div>
     <div class="utility_class">
+        <span>Jumping Balls</span>
         <div class="utility slide_down animate animate--slow animate--infinite">1</div>
         <div class="utility animate slide_down animate--fast animate--infinite">2</div>
         <div class="utility animate slide_down animate--medium  animate--infinite">3</div>
