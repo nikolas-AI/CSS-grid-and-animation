@@ -61,6 +61,9 @@
         .child8 {
             grid-area: 5/4/7/6;
         }
+        .child10 {
+            grid-area: 1/7/8/7;
+        }
         
         .image {
             margin: 50px;
@@ -165,8 +168,8 @@
             background: linear-gradient(to bottom, red, blue);
             border: 2px solid white;
         } 
-    .a {
-        /* transition-property: transform ;
+        .a {
+            /* transition-property: transform ;
         transition-duration: 1s;
         transition-timing-function: linear;
         transition-delay: 0s; */
@@ -176,7 +179,7 @@
         transition: all 2s;
     }
     .a:hover {
-        transform: scale(-1) rotate(180deg);
+        transform:  scale(1.5);
         background: linear-gradient(to bottom, rgb(238, 255, 0), rgb(0, 255, 21));
         font-size: 30px;
 
@@ -189,7 +192,7 @@
         animation-iteration-count: infinite;
         animetion-direction: reverse
         animation-fill-mode: both; */
-
+        
         animation: rotate 3s linear 0s 5 reverse both;
     }
     
@@ -201,11 +204,11 @@
             transform: rotate(360deg);
         }
     }
-
+    
     .c {
         animation: slide_down 3s ease-in 0s  normal forwards;
     }
-
+    
     @keyframes slide_down {
         0%{
             transform: translateY(0);
@@ -225,7 +228,7 @@
         0% {
             transform: translateY(0);
         }
-         20%, 40%, 60%, 80%, 100% {
+        20%, 40%, 60%, 80%, 100% {
             transform: translateY(350px);
         }
         30% {
@@ -239,10 +242,57 @@
         }
         90% {
             transform: translateY(330px);
-        }
-        
+        }   
     }
+    
 
+  /*Utility class*/
+  .animate {
+        animation-duration: 2s ;
+        animation-fill-mode: both;
+    }
+    .animate--infinite {
+        animation-iteration-count: infinite;
+    } 
+    .animate--delay {
+        animation-delay: 2s;
+    }
+    .animate--fast {
+        animation-duration: 0.5s;
+    }
+    .animate--slow {
+        animation-duration: 3s;
+    }
+    .utility_class {
+        position: relative;
+        background: linear-gradient(to right, rgb(195, 249, 0)50%, rgba(0, 243, 97, 0.703));
+        height: 500px;
+        width: 1000px;
+        border: 5px solid black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-around;
+        transform: translateX(20%);
+    }
+    .utility {
+        height: 100px;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        background: linear-gradient(to bottom, red, blue);
+        border: 2px solid white;
+    } 
+    .slide_down {
+        animation: slide;
+    }
+    @keyframes slide {
+        from{
+            transform: translateY(0);
+        }
+        to{
+            transform: translateY(350px);
+        }
+    }
         </style>
 </head>
 <body>
@@ -279,6 +329,12 @@
         <div class="animation b">B</div>
         <div class="animation c">C</div>
         <div class="animation d">D</div>
+    </div>
+    <div class="utility_class">
+        <div class="utility 1">1</div>
+        <div class="utility 2">2</div>
+        <div class="utility 3">3</div>
+        <div class="utility 4">4</div>
     </div>
     
 </body>
