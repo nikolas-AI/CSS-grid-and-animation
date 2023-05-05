@@ -238,7 +238,7 @@ animation: slide_down 3s ease-in 0s  normal forwards;
 
 .d {
 border-radius: 50%;
-animation: bounce 4s linear 0s 1 normal forwards;
+animation: bounce 4s linear 0s infinite normal forwards;
 box-shadow: 0px 80px 10px 0px black;
 }
 
